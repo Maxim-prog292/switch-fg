@@ -1,0 +1,211 @@
+.app {
+  width: 1920px;
+  height: 1080px;
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  background: #005542;
+}
+
+.app::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    url("assets/start-pattern-group10.svg"),
+    url("assets/start-pattern-group10.svg"),
+    url("assets/start-pattern-group17.svg"),
+    url("assets/start-pattern-group10.svg"),
+    url("assets/start-pattern-group10.svg"),
+    url("assets/start-pattern-group10.svg");
+  background-repeat: no-repeat;
+  background-size: 324px 329px, 324px 329px, 405px 329px, 324px 329px, 324px 329px, 324px 329px;
+  background-position: -198px 224px, 248px -23px, 1476px 18px, 18px 890px, 828px 890px, 1160px -24px;
+  opacity: 0.72;
+}
+
+.topbar {
+  position: absolute;
+  left: 60px;
+  top: 46px;
+  width: 1800px;
+  height: 78px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  z-index: 1;
+}
+
+.kicker {
+  margin: 0 0 4px;
+  color: #e7e0d2;
+  font-family: "Start Text", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h1 {
+  margin: 0;
+  color: #e7e0d2;
+  font-family: "Start Headings", Georgia, serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 58px;
+}
+
+.goal-card {
+  width: auto;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #e7e0d2;
+}
+
+.goal-card span {
+  display: block;
+  color: #e7e0d2;
+  font-family: "Start Headings", Georgia, serif;
+  font-size: 72px;
+  line-height: 50px;
+}
+
+.goal-card strong {
+  display: block;
+  margin-top: 16px;
+  color: #e7e0d2;
+  font-family: "Start Text", Arial, sans-serif;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.trade-board {
+  position: absolute;
+  left: 60px;
+  top: 145px;
+  width: 1800px;
+  height: 781px;
+  display: grid;
+  gap: 22px;
+  padding: 34px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #02775d;
+  box-shadow:
+    inset 0 4px 8.4px rgba(0, 0, 0, 0.25),
+    0 6px 22px rgba(0, 0, 0, 0.18);
+  z-index: 1;
+}
+
+.trade-board.count-3,
+.trade-board.count-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.trade-board.count-5,
+.trade-board.count-6 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.person {
+  min-height: 0;
+  padding: 20px;
+  border: 1px solid rgba(231, 224, 210, 0.28);
+  border-radius: 20px;
+  background: #9aa89b;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
+}
+
+.person::after {
+  content: none;
+}
+
+.person h2 {
+  color: #004c3d;
+  font-family: "Start Headings", Georgia, serif;
+  font-size: 34px;
+}
+
+.needs,
+.portrait,
+.selected-box,
+.message {
+  border: 0;
+  border-radius: 20px;
+  background: rgba(231, 224, 210, 0.74);
+}
+
+.needs strong,
+.selected-box strong,
+.message {
+  color: #004c3d;
+  font-family: "Start Text", Arial, sans-serif;
+}
+
+.exchange-strip {
+  position: absolute;
+  inset: 951px 60px auto 60px;
+  height: 93px;
+  display: grid;
+  grid-template-columns: 369px 1fr 778px;
+  gap: 30px;
+  z-index: 2;
+}
+
+.selected-box,
+.message {
+  min-height: 93px;
+  padding: 14px 22px;
+}
+
+.selected-box span {
+  color: #004c3d;
+  font-family: "Start Text", Arial, sans-serif;
+  font-size: 18px;
+}
+
+.message {
+  align-items: center;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 369px 369px;
+  gap: 40px;
+}
+
+.primary,
+.secondary,
+.level-button,
+.finish-card button {
+  min-height: 93px;
+  border-radius: 20px;
+  background: rgba(5, 20, 10, 0.2);
+  color: #e7e0d2;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Start Headings", Georgia, serif;
+  font-size: 42px;
+  line-height: 44px;
+}
+
+.primary:active,
+.secondary:active,
+.level-button:active,
+.finish-card button:active {
+  background: rgba(5, 20, 10, 0.4);
+  transform: none;
+}
+
+.finish-panel {
+  background: rgba(217, 217, 217, 0.2);
+  backdrop-filter: blur(20px);
+}
+
+.finish-panel::before,
+.finish-panel::after {
+  content: none;
+}

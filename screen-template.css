@@ -1,0 +1,251 @@
+.result-panel,
+.finish-panel,
+.guess-end-panel {
+  position: absolute;
+  inset: 0;
+  z-index: 55;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #005542 !important;
+  color: #004c3d;
+  text-align: center;
+}
+
+.result-panel[hidden],
+.finish-panel[hidden],
+.guess-end-panel[hidden] {
+  display: none !important;
+}
+
+.result-panel::before,
+.finish-panel::before,
+.guess-end-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    url("assets/start-pattern-group10.svg"),
+    url("assets/start-pattern-group10.svg"),
+    url("assets/start-pattern-group17.svg"),
+    url("assets/start-pattern-group10.svg"),
+    url("assets/start-pattern-group10.svg"),
+    url("assets/start-pattern-group10.svg"),
+    url("assets/start-pattern-group10.svg"),
+    url("assets/start-pattern-group10.svg");
+  background-position:
+    15px -77px,
+    825px 60px,
+    1230px 61px,
+    960px 61px,
+    690px -79px,
+    -660px 332px,
+    420px -78px,
+    150px -78px;
+  background-repeat: no-repeat;
+  background-size:
+    1080px 1095px,
+    1080px 1095px,
+    1350px 1095px,
+    1080px 1095px,
+    1080px 1095px,
+    1080px 1095px,
+    1080px 1095px,
+    1080px 1095px;
+}
+
+.result-card,
+.finish-card,
+.guess-end-card {
+  position: relative;
+  z-index: 1;
+  width: 911px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 54px 78px 58px;
+  border: 0;
+  border-radius: 30px !important;
+  background: #9aa89b;
+  color: #004c3d;
+  box-shadow: 0 28px 46px rgba(5, 20, 10, 0.28);
+  text-align: center;
+}
+
+.result-eyebrow,
+.finish-card .result-eyebrow,
+.guess-end-eyebrow {
+  margin: 0 0 16px;
+  color: #004c3d;
+  font-family: "Start Text", Arial, sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.result-card h2,
+.finish-card h2,
+.guess-end-card h2 {
+  max-width: 760px;
+  margin: 0;
+  color: #004c3d;
+  font-family: "Start Headings", Georgia, serif;
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-align: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-transform: none;
+}
+
+.result-card p:last-of-type,
+.finish-card p,
+.guess-end-card p {
+  max-width: 760px;
+  min-height: 0;
+  margin: 28px 0 0;
+  color: #004c3d;
+  font-family: "Start Text", Arial, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.result-score {
+  width: 650px;
+  min-height: 88px;
+  display: grid;
+  place-items: center;
+  margin: 28px 0 0;
+  border-radius: 20px;
+  background: rgba(5, 20, 10, 0.14);
+  color: #e7e0d2;
+  font-family: "Start Headings", Georgia, serif;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.result-score[hidden],
+.finish-actions button[hidden] {
+  display: none !important;
+}
+
+.result-card button,
+.finish-card button,
+.guess-end-card button {
+  width: 650px;
+  height: 112px;
+  min-width: 650px;
+  min-height: 112px;
+  margin-top: auto;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 20px !important;
+  background: rgba(5, 20, 10, 0.2);
+  color: #e7e0d2;
+  box-shadow: 0 4px 14px rgba(5, 20, 10, 0.18);
+  font-family: "Start Headings", Georgia, serif;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.result-card button:active,
+.finish-card button:active,
+.guess-end-card button:active {
+  transform: none;
+  background: rgba(5, 20, 10, 0.4);
+  box-shadow: 0 4px 14px rgba(5, 20, 10, 0.22);
+}
+
+.finish-actions {
+  width: 650px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: auto;
+}
+
+.finish-actions button {
+  width: auto;
+  min-width: 0;
+  height: 112px;
+  min-height: 112px;
+  margin-top: 0;
+  font-size: 34px;
+}
+
+.finish-actions:has(#nextLevelButton[hidden]) {
+  grid-template-columns: 1fr;
+}
+
+.start-content .start-actions {
+  gap: 12px;
+}
+
+.start-content .level-menu {
+  gap: 10px;
+}
+
+.start-content .level-button {
+  min-height: 70px;
+  padding: 8px 12px;
+  border-radius: 14px !important;
+  font-size: 20px;
+  line-height: 1.04;
+}
+
+.start-content .level-button small {
+  display: block !important;
+  margin-top: 5px;
+  color: #e7e0d2;
+  font-family: "Start Text", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.05;
+}
+
+@media (max-width: 1300px), (max-height: 760px) {
+  .result-card,
+  .finish-card,
+  .guess-end-card {
+    width: 820px;
+    min-height: 540px;
+    padding: 46px 70px 48px;
+  }
+
+  .result-card h2,
+  .finish-card h2,
+  .guess-end-card h2 {
+    font-size: 58px;
+  }
+
+  .result-card p:last-of-type,
+  .finish-card p,
+  .guess-end-card p {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .result-card button,
+  .finish-card button,
+  .guess-end-card button,
+  .finish-actions,
+  .result-score {
+    width: 600px;
+    min-width: 600px;
+  }
+}

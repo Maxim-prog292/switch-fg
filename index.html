@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Поменяйся, если сможешь</title>
+    <link rel="stylesheet" href="styles.css?v=20260913-1830" />
+    <link rel="stylesheet" href="screen-template.css?v=20260913-1830" />
+    <link rel="stylesheet" href="figma-level.css?v=20260913-1830" />
+    <link rel="stylesheet" href="exhibit-ui.css?v=20260913-1830" />
+    <link rel="stylesheet" href="museum-v2.css?v=20260913-1830" />
+  </head>
+  <body>
+    <main class="app" id="app" aria-label="Игра Поменяйся, если сможешь">
+      <header class="topbar">
+        <div>
+          <p class="kicker" id="levelKicker">Бартер и деньги</p>
+          <h1>Поменяйся, если сможешь</h1>
+        </div>
+        <div class="goal-card" aria-live="polite">
+          <span id="modeLabel">Уровень 1 / 4</span>
+          <strong id="goalText">Получить топор</strong>
+        </div>
+      </header>
+
+      <section class="trade-board" id="tradeBoard" aria-label="Персонажи для обмена"></section>
+
+      <section class="exchange-strip" aria-label="Ход обмена">
+        <div class="selected-box">
+          <span>Выбрано</span>
+          <strong id="selectedText">Сначала нажмите на Ивана</strong>
+        </div>
+        <div class="message" id="message" aria-live="assertive"></div>
+        <div class="actions">
+          <button class="secondary" id="menuButton">Выбор уровня</button>
+          <button class="secondary" id="restartButton">Заново</button>
+        </div>
+      </section>
+
+      <section class="start-panel level-picker" id="startPanel" aria-live="polite" hidden>
+        <div class="start-content">
+          <p class="start-kicker">Бартер и деньги</p>
+          <h2>Выберите цепочку</h2>
+          <p>Можно пройти все уровни по порядку или открыть нужную цепочку отдельно.</p>
+          <div class="start-actions">
+            <button class="primary" id="startSequenceButton">Все по порядку</button>
+            <div class="level-menu" id="levelMenu" aria-label="Выбор уровня"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="finish-panel" id="finishPanel" hidden aria-live="assertive">
+        <div class="finish-card">
+          <p class="result-eyebrow" id="finishEyebrow">Уровень пройден</p>
+          <h2 id="finishTitle">Уф, получилось!</h2>
+          <p id="finishText"></p>
+          <div class="finish-actions">
+            <button class="primary" id="nextLevelButton">Следующий уровень</button>
+            <button class="secondary" id="finishMenuButton">Выбор уровня</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="exhibit-ui.js?v=20260913-1830"></script>
+    <script src="script.js?v=20260913-1830"></script>
+  </body>
+</html>
